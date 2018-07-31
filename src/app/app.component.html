@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{title}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li routerLink="active" class="nav-item">
+        <a class="nav-link" routerLink="/lugares">Inicio </a>
+      </li>
+      <!-- <li routerLink="active" class="nav-item">
+        <a class="nav-link" routerLink="/detalle/1">Detalle</a>
+      </li> -->
+      <li routerLink="active" class="nav-item">
+        <a class="nav-link" routerLink="/contacto">Contacto</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet> </router-outlet>
+<!-- <ul>
+  <ng-container *ngFor="let lugar of lugares; let i = index" [ngSwitch]="lugar.cercania">
+    <a> <li contar-clicks [ngStyle]="{color:(lugar.active) ? 'black' : 'gray'}" [ngClass]="{numero_par: (i+1) %2 !== 0}" [resaltar]="lugar.plan">
+      {{lugar.nombre}} -
+      <span *ngSwitchCase="1" [ngStyle]="{color:'olive'}">Muy cercano</span>
+      <span *ngSwitchCase="2" [ngStyle]="{color:'black'}">Cercano</span>
+      <span *ngSwitchCase="3" [ngStyle]="{color:'red'}">Lejano</span>
+    </li></a>
+  </ng-container>
+</ul> -->
+
+<!-- <ul>
+  <ng-container *ngFor="let persona of personas">
+    <li *ngIf="persona.edad > 18">{{persona.nombre}}</li>
+  </ng-container>
+</ul> -->
+
+<!-- <hr>
+<button [disabled]="!listo" (click)="hacerAlgo()">Cliquéame</button>
+<input type="text" placeholder="Tu nombre" [(ngModel)]="nombre" />
+<input type="text" placeholder="Tu apellido" [(ngModel)]="apellido" />
+<br> <br>
+Mi nombre es {{nombre +" "+ apellido}} -->
