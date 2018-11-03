@@ -14,20 +14,13 @@ export class LugaresComponent {
 
   lat:number = 19.4483272;
   lng:number = -99.1738324;
-  lugares : Observable<LugaresService>;
+  lugares:any;
 
-  constructor(afDB: AngularFireDatabase){
-
-    // this.lugares = afDB.list('lugares/').valueChanges();
-  // constructor(private lugaresService: LugaresService){
-      // lugaresService.getLugares()
-      //   .suscribe( lugares => {
-      //     this.lugares = lugares;
-
-      // this.lugares = lugaresService.getLugares().valueChanges();
-      console.log(this.lugares);
-
-
+  constructor(afDB: AngularFireDatabase, private lugaresService: LugaresService){
+      lugaresService.getLugares()
+        .valueChanges().subscribe( lugares => {
+          this.lugares = lugares;
+        });
   }
 
 }
